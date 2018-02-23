@@ -40,14 +40,16 @@
 		576713A42040BD3200369809 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713992040BD3200369809 /* TableViewExtension.swift */; };
 		576713A52040BD3200369809 /* DecodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5767139A2040BD3200369809 /* DecodableExtension.swift */; };
 		576713A62040BD3200369809 /* DecodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5767139A2040BD3200369809 /* DecodableExtension.swift */; };
-		576713AC2040C05C00369809 /* Protocols in Resources */ = {isa = PBXBuildFile; fileRef = 576713A82040C05C00369809 /* Protocols */; };
-		576713AD2040C05C00369809 /* Protocols in Resources */ = {isa = PBXBuildFile; fileRef = 576713A82040C05C00369809 /* Protocols */; };
-		576713AE2040C05C00369809 /* SuperHeroMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713A92040C05C00369809 /* SuperHeroMapper.swift */; };
-		576713AF2040C05C00369809 /* SuperHeroMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713A92040C05C00369809 /* SuperHeroMapper.swift */; };
-		576713B02040C05C00369809 /* SuperHeroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713AA2040C05C00369809 /* SuperHeroRepository.swift */; };
-		576713B12040C05C00369809 /* SuperHeroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713AA2040C05C00369809 /* SuperHeroRepository.swift */; };
-		576713B22040C05C00369809 /* SuperHeroStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713AB2040C05C00369809 /* SuperHeroStorage.swift */; };
-		576713B32040C05C00369809 /* SuperHeroStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713AB2040C05C00369809 /* SuperHeroStorage.swift */; };
+		576713AE2040C05C00369809 /* MoviesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713A92040C05C00369809 /* MoviesMapper.swift */; };
+		576713AF2040C05C00369809 /* MoviesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713A92040C05C00369809 /* MoviesMapper.swift */; };
+		576713B02040C05C00369809 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713AA2040C05C00369809 /* MoviesRepository.swift */; };
+		576713B12040C05C00369809 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713AA2040C05C00369809 /* MoviesRepository.swift */; };
+		576713B22040C05C00369809 /* MoviesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713AB2040C05C00369809 /* MoviesStorage.swift */; };
+		576713B32040C05C00369809 /* MoviesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713AB2040C05C00369809 /* MoviesStorage.swift */; };
+		576713B72040C17C00369809 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713B52040C17C00369809 /* Repository.swift */; };
+		576713B82040C17C00369809 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713B52040C17C00369809 /* Repository.swift */; };
+		576713B92040C17C00369809 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713B62040C17C00369809 /* Mapper.swift */; };
+		576713BA2040C17C00369809 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713B62040C17C00369809 /* Mapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,10 +100,11 @@
 		576713982040BD3200369809 /* UITableCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableCellExtension.swift; sourceTree = "<group>"; };
 		576713992040BD3200369809 /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		5767139A2040BD3200369809 /* DecodableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodableExtension.swift; sourceTree = "<group>"; };
-		576713A82040C05C00369809 /* Protocols */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Protocols; sourceTree = "<group>"; };
-		576713A92040C05C00369809 /* SuperHeroMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperHeroMapper.swift; sourceTree = "<group>"; };
-		576713AA2040C05C00369809 /* SuperHeroRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperHeroRepository.swift; sourceTree = "<group>"; };
-		576713AB2040C05C00369809 /* SuperHeroStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperHeroStorage.swift; sourceTree = "<group>"; };
+		576713A92040C05C00369809 /* MoviesMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesMapper.swift; sourceTree = "<group>"; };
+		576713AA2040C05C00369809 /* MoviesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
+		576713AB2040C05C00369809 /* MoviesStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesStorage.swift; sourceTree = "<group>"; };
+		576713B52040C17C00369809 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		576713B62040C17C00369809 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,12 +276,21 @@
 		576713A72040C03700369809 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				576713A82040C05C00369809 /* Protocols */,
-				576713A92040C05C00369809 /* SuperHeroMapper.swift */,
-				576713AA2040C05C00369809 /* SuperHeroRepository.swift */,
-				576713AB2040C05C00369809 /* SuperHeroStorage.swift */,
+				576713B42040C15800369809 /* Protocols */,
+				576713A92040C05C00369809 /* MoviesMapper.swift */,
+				576713AA2040C05C00369809 /* MoviesRepository.swift */,
+				576713AB2040C05C00369809 /* MoviesStorage.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		576713B42040C15800369809 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				576713B62040C17C00369809 /* Mapper.swift */,
+				576713B52040C17C00369809 /* Repository.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,7 +403,6 @@
 			files = (
 				576713472040B26F00369809 /* LaunchScreen.storyboard in Resources */,
 				5767136D2040B35600369809 /* Movies.storyboard in Resources */,
-				576713AC2040C05C00369809 /* Protocols in Resources */,
 				576713442040B26F00369809 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +411,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576713AD2040C05C00369809 /* Protocols in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,21 +433,23 @@
 				5767138C2040BA1300369809 /* Movies.swift in Sources */,
 				576713792040B3CA00369809 /* MoviesPresenterProtocol.swift in Sources */,
 				5767137C2040B3DE00369809 /* MoviesRouting.swift in Sources */,
+				576713B72040C17C00369809 /* Repository.swift in Sources */,
 				5767139F2040BD3200369809 /* UINavigationControllerExtension.swift in Sources */,
 				5767139B2040BD3200369809 /* EncodableExtension.swift in Sources */,
 				576713A52040BD3200369809 /* DecodableExtension.swift in Sources */,
 				576713702040B36900369809 /* MoviesProtocol.swift in Sources */,
-				576713B02040C05C00369809 /* SuperHeroRepository.swift in Sources */,
+				576713B02040C05C00369809 /* MoviesRepository.swift in Sources */,
 				576713A12040BD3200369809 /* UITableCellExtension.swift in Sources */,
 				5767133D2040B26F00369809 /* AppDelegate.swift in Sources */,
 				5767139D2040BD3200369809 /* UIImageViewExtension.swift in Sources */,
 				576713742040B39D00369809 /* MoviesInteractorProtocol.swift in Sources */,
 				5767136B2040B33E00369809 /* MoviesViewController.swift in Sources */,
-				576713B22040C05C00369809 /* SuperHeroStorage.swift in Sources */,
+				576713B22040C05C00369809 /* MoviesStorage.swift in Sources */,
+				576713B92040C17C00369809 /* Mapper.swift in Sources */,
 				576713A32040BD3200369809 /* TableViewExtension.swift in Sources */,
 				576713722040B39200369809 /* MoviesInteractor.swift in Sources */,
 				576713882040BA0600369809 /* Movie.swift in Sources */,
-				576713AE2040C05C00369809 /* SuperHeroMapper.swift in Sources */,
+				576713AE2040C05C00369809 /* MoviesMapper.swift in Sources */,
 				576713772040B3BC00369809 /* MoviesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,8 +458,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576713B12040C05C00369809 /* SuperHeroRepository.swift in Sources */,
-				576713B32040C05C00369809 /* SuperHeroStorage.swift in Sources */,
+				576713B12040C05C00369809 /* MoviesRepository.swift in Sources */,
+				576713B32040C05C00369809 /* MoviesStorage.swift in Sources */,
+				576713B82040C17C00369809 /* Repository.swift in Sources */,
 				576713842040B89700369809 /* MoviesAPIClient.swift in Sources */,
 				5767139E2040BD3200369809 /* UIImageViewExtension.swift in Sources */,
 				5767139C2040BD3200369809 /* EncodableExtension.swift in Sources */,
@@ -457,8 +470,9 @@
 				5767138D2040BA1300369809 /* Movies.swift in Sources */,
 				576713892040BA0600369809 /* Movie.swift in Sources */,
 				576713A02040BD3200369809 /* UINavigationControllerExtension.swift in Sources */,
+				576713BA2040C17C00369809 /* Mapper.swift in Sources */,
 				576713A62040BD3200369809 /* DecodableExtension.swift in Sources */,
-				576713AF2040C05C00369809 /* SuperHeroMapper.swift in Sources */,
+				576713AF2040C05C00369809 /* MoviesMapper.swift in Sources */,
 				576713A42040BD3200369809 /* TableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
