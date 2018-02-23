@@ -1,6 +1,6 @@
 import Foundation
 
-class MoviesPresenter {
+class MoviesPresenter: MoviesPresenterProtocol {
     var interactor: MoviesInteractorProtocol!
     var routing: MoviesRoutingProtocol!
     weak var view: MoviesViewProtocol!
@@ -23,7 +23,7 @@ class MoviesPresenter {
         let superHero = interactor.movie(at: indexPath)
     }
     
-    func superHero(at indexPath: IndexPath) -> Movie {
+    func movie(at indexPath: IndexPath) -> Movie {
         return interactor.movie(at: indexPath)
     }
 }
