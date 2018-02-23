@@ -9,7 +9,7 @@ class MoviesAPIClient {
       return "\(baseURL)popular?api_key=\(APIKey)"
     }
     
-    func fetchMovies(completionhandler: @escaping (Data) -> Void, errorHandler: @escaping (Error) -> Void) {
+    func getMovies(completionhandler: @escaping (Data) -> Void, errorHandler: @escaping (Error) -> Void) {
         guard let URL = URL(string: moviesURL) else { return }
         let request = URLRequest(url: URL)
         URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
