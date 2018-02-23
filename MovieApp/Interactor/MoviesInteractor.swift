@@ -15,11 +15,11 @@ class MoviesInteractor: MoviesInteractorProtocol {
         })
     }
     
-    func superHero(at index: IndexPath) -> Movie {
+    func movie(at index: IndexPath) -> Movie {
         return moviesRepository.fetchItem(at: index)
     }
     
-    func allSuperHeroes() -> [Movie] {
+    func allMovies() -> [Movie] {
         return moviesRepository.items
     }
 }
