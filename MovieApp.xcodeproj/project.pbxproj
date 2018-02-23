@@ -20,6 +20,7 @@
 		576713792040B3CA00369809 /* MoviesPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713782040B3CA00369809 /* MoviesPresenterProtocol.swift */; };
 		5767137C2040B3DE00369809 /* MoviesRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5767137B2040B3DE00369809 /* MoviesRouting.swift */; };
 		5767137E2040B3EA00369809 /* MoviesRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5767137D2040B3EA00369809 /* MoviesRoutingProtocol.swift */; };
+		576713812040B4CB00369809 /* MoviesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576713802040B4CB00369809 /* MoviesAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		576713782040B3CA00369809 /* MoviesPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPresenterProtocol.swift; sourceTree = "<group>"; };
 		5767137B2040B3DE00369809 /* MoviesRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouting.swift; sourceTree = "<group>"; };
 		5767137D2040B3EA00369809 /* MoviesRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRoutingProtocol.swift; sourceTree = "<group>"; };
+		576713802040B4CB00369809 /* MoviesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				576713752040B3AE00369809 /* Interactor */,
 				5767137A2040B3CD00369809 /* Presenter */,
 				5767137F2040B3EE00369809 /* Routing */,
+				576713802040B4CB00369809 /* MoviesAPIClient.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5767137E2040B3EA00369809 /* MoviesRoutingProtocol.swift in Sources */,
+				576713812040B4CB00369809 /* MoviesAPIClient.swift in Sources */,
 				576713792040B3CA00369809 /* MoviesPresenterProtocol.swift in Sources */,
 				5767137C2040B3DE00369809 /* MoviesRouting.swift in Sources */,
 				576713702040B36900369809 /* MoviesProtocol.swift in Sources */,
@@ -475,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5BX4GZ5WM;
 				INFOPLIST_FILE = MovieApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RaulPedrazaLeon.MovieApp;
@@ -489,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5BX4GZ5WM;
 				INFOPLIST_FILE = MovieApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RaulPedrazaLeon.MovieApp;
