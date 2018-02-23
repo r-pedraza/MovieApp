@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AjG-Kw-R2a">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="-176.80000000000001" y="-48.125937031484263"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Movies Navigation Controller-->
         <scene sceneID="R3n-ns-NlQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AjG-Kw-R2a" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AjG-Kw-R2a" customClass="MoviesNavigationController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9HO-8f-rQB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
