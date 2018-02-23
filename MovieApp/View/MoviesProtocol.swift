@@ -1,3 +1,3 @@
-protocol MoviesViewProtocol {
-    
+protocol MoviesViewProtocol: class {
+    func reloadData()
 }
