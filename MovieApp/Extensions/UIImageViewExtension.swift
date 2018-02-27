@@ -1,8 +1,9 @@
 import UIKit
 
 extension UIImageView {
-    func setImage(urlString: String) {
+    func setImage(urlString: String, placeholder: UIImage) {
         guard let url = URL(string: urlString) else { return }
+        image = placeholder
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
             if error != nil {
                 return
