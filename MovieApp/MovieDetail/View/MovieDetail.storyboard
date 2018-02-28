@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="a2e-lL-c6T">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailViewControllerID" id="KFn-4I-bgS" customClass="MovieDetailViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bNb-Pi-TGh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5hX-Gs-yyX">
+                                <rect key="frame" x="10" y="30" width="375" height="627"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-XB-guJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="606"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPX-zG-1XA">
+                                        <rect key="frame" x="0.0" y="606" width="375" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5hX-Gs-yyX" firstAttribute="top" secondItem="6sS-xs-22v" secondAttribute="top" constant="10" id="DqU-bk-OUY"/>
+                            <constraint firstItem="5hX-Gs-yyX" firstAttribute="leading" secondItem="6sS-xs-22v" secondAttribute="leading" constant="10" id="Xvm-QO-CjZ"/>
+                            <constraint firstItem="6sS-xs-22v" firstAttribute="trailing" secondItem="5hX-Gs-yyX" secondAttribute="trailing" constant="10" id="ndz-2b-63H"/>
+                            <constraint firstItem="6sS-xs-22v" firstAttribute="bottom" secondItem="5hX-Gs-yyX" secondAttribute="bottom" constant="10" id="yFM-j7-fIM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6sS-xs-22v"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieDetailDescriptionLabel" destination="rPX-zG-1XA" id="Ied-rM-pTN"/>
+                        <outlet property="movieDetailImageView" destination="EP2-XB-guJ" id="K5d-lh-S8e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoP-s3-uP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholder" width="795" height="596"/>
+    </resources>
+</document>
