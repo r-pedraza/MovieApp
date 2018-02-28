@@ -1,5 +1,5 @@
 import Foundation
 
-class Movies: Codable, ViewModel {
+class Movies: Codable {
     let results: [Movie]
 }
