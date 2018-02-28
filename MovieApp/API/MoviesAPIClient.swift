@@ -5,6 +5,7 @@ extension String: Error {}
 class MoviesAPIClient {
     let baseURL = "https://api.themoviedb.org/3/movie/"
     let APIKey = "b66ffea8276ce576d60df52600822c88"
+
     var moviesURL: String {
       return "\(baseURL)popular?api_key=\(APIKey)"
     }

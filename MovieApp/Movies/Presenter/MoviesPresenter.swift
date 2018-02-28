@@ -20,7 +20,8 @@ class MoviesPresenter: MoviesPresenterProtocol {
     }
     
     func selectRow(at indexPath: IndexPath) {
-        let superHero = interactor.movie(at: indexPath)
+        let movie = interactor.movie(at: indexPath)
+        routing.load(movie: movie)
     }
     
     func movie(at indexPath: IndexPath) -> Movie {

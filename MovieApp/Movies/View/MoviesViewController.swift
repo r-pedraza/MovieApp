@@ -19,7 +19,7 @@ class MoviesViewController: UIViewController {
     }
     
     private func setupTableView() {
-        title = "Marvel"
+        title = "Movies"
         tableCellFactory = TableCellFactory(tableView: tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -34,7 +34,6 @@ extension MoviesViewController: MoviesViewProtocol {
         tableView.reloadData()
     }
 }
-
 //MARK: UITableViewDataSource, UITableViewDelegate
 extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
     
