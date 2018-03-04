@@ -5,11 +5,9 @@ class MoviesViewController: UIViewController {
     var presenter: MoviesPresenterProtocol!
     var tableCellFactory: TableCellFactory!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        if let navigationController = navigationController as? MoviesNavigationController {
-            _ = MoviesRouting(navigationController: navigationController, viewController: self).setup()
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        _ = MoviesRouting(viewController: self).setup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +24,10 @@ class MoviesViewController: UIViewController {
         tableView.estimatedRowHeight = 180
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(MovieTableViewCell.self)
+    }
+    //MARK: Actions
+    @IBAction func didTapInFavoriteButton(_ sender: Any) {
+        print("adddddddddd")
     }
 }
 

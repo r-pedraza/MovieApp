@@ -12,11 +12,15 @@ class MoviesNavigationController: UINavigationController {
         navigationBar.backIndicatorTransitionMaskImage = backIcon
         navigationBar.tintColor = .white
         navigationBar.barStyle = UIBarStyle.blackTranslucent
-        let frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        let search = UISearchController()
-        let bar = search.searchBar
-        bar.frame = frame
-        navigationItem.searchController = search
+    }
+    
+    func showFavoriteButton()  {
+        let favoriteButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapInFavoriteButton))
+        navigationItem.setRightBarButton(favoriteButton, animated: true)
+    }
+    
+    @objc func didTapInFavoriteButton() {
+        print("ou yes!!!!!")
     }
 }
 
