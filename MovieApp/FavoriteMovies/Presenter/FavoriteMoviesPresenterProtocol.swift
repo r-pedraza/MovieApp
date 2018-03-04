@@ -1,0 +1,5 @@
+import Foundation
+
+protocol FavoriteMoviesPresenterProtocol {
+    
+}
