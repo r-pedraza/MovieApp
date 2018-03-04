@@ -19,6 +19,10 @@ class MovieDetailViewController: UIViewController {
             nav.showFavoriteButton()
         }
     }
+    
+    @IBAction func didTapInCloseButton(_ sender: Any) {
+        presenter.didTapInCloseButton()
+    }
 }
 //MARK: MovieDetailViewProtocol
 extension MovieDetailViewController: MovieDetailViewProtocol {
