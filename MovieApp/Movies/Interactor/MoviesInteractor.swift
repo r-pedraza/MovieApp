@@ -8,7 +8,7 @@ class MoviesInteractor: MoviesInteractorProtocol {
     }
     
     func execute(completionHandler: @escaping () -> Void) {
-        moviesRepository.fetchAllItems(completionHandler: { superHeroresResponse in
+        moviesRepository.fetchAllItems(completionHandler: { moviesResponse in
             completionHandler()
         }, errorHandler: { error in
             debugPrint(error)
