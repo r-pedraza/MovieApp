@@ -20,11 +20,11 @@ class MoviesRouting {
 
 extension MoviesRouting: MoviesRoutingProtocol {
     func load(movie detail: Movie) {
-//        let storyBoard = UIStoryboard(name: "MovieDetail", bundle: nil)
-//        if let movieDetailViewController = storyBoard.instantiateViewController(withIdentifier: "MovieDetailViewControllerID") as? MovieDetailViewController {
-//            movieDetailViewController.movie = detail
-//            navigationController.pushViewController(movieDetailViewController, animated: true)
-//        }
+        let storyBoard = UIStoryboard(name: "MovieDetail", bundle: nil)
+        if let movieDetailViewController = storyBoard.instantiateViewController(withIdentifier: "MovieDetailViewControllerID") as? MovieDetailViewController {
+            movieDetailViewController.movie = detail
+            viewController.present(movieDetailViewController, animated: true, completion: nil)
+        }
     }
 }
 
