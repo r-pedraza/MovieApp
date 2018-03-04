@@ -15,4 +15,8 @@ class MovieDetailRouting: MovieDetailRoutingProtocol {
         presenter.view = viewController
         viewController.presenter = presenter
     }
+    //MARK: MovieDetailRoutingProtocol
+    func dismissMovieDetailViewController() {
+        viewController.dismiss(animated: true, completion: nil)
+    }
 }

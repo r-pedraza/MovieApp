@@ -1,5 +1,5 @@
 import Foundation
-
+import RealmSwift
 class MoviesPresenter: MoviesPresenterProtocol {
     var interactor: MoviesInteractorProtocol!
     var routing: MoviesRoutingProtocol!
@@ -21,6 +21,11 @@ class MoviesPresenter: MoviesPresenterProtocol {
     
     func selectRow(at indexPath: IndexPath) {
         let movie = interactor.movie(at: indexPath)
+        let realm = try! Realm()
+        try! realm.write {
+            let favoriteMovie = FavoriteMovie()
+            realm.add(favoriteMovie.setup(with: movie))
+        }
         routing.load(movie: movie)
     }
     

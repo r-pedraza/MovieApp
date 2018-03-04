@@ -8,4 +8,8 @@ class MovieDetailPresenter: MovieDetailPresenterProtocol {
     func loadData() {
         interactor.execute {}
     }
+    
+    func didTapInCloseButton() {
+        routing.dismissMovieDetailViewController()
+    }
 }

@@ -2,8 +2,9 @@ import UIKit
 
 class FavoriteMoviesViewController: UIViewController {
     var presenter: FavoriteMoviesPresenterProtocol!
-    
+    var tableCellFactory: TableCellFactory!
     @IBOutlet weak var tableView: UITableView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         title = "Favorite Movies"
@@ -20,7 +21,9 @@ class FavoriteMoviesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = UITableViewAutomaticDimension
-        tableView.rowHeight = 60
+        tableView.rowHeight = 180
+        tableView.register(MovieTableViewCell.self)
+        tableCellFactory = TableCellFactory(tableView: tableView)
     }
 }
 
@@ -39,7 +42,7 @@ extension FavoriteMoviesViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let favoriteMovie = presenter.favoriteMovies[indexPath.row]
-        return UITableViewCell()
+        let favoriteMovie = presenter.favoriteMovies[indexPath.row]
+        return tableCellFactory.createCell(viewModel: favoriteMovie)
     }
 }
