@@ -8,7 +8,8 @@ class FavoriteMoviesRouting: FavoriteMoviesRoutingProtocol {
     }
     
     func setup() {
-        let interactor = FavoriteMoviesInteractor()
+        let repository = FavoriteMoviesRepository()
+        let interactor = FavoriteMoviesInteractor(repository: repository)
         let presenter = FavoriteMoviesPresenter()
         presenter.interactor = interactor
         presenter.routing = self
