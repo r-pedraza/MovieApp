@@ -6,7 +6,7 @@ class MoviesRepository: Repository {
     private var moviesMapper = MoviesMapper()
     typealias T = Movie
     
-    func fetchAllItems(completionHandler: @escaping ([Movie]) -> Void, errorHandler: @escaping (Error) -> Void)  {
+    func fetchAllItems(completionHandler: @escaping ([Movie]) -> Void, errorHandler: @escaping (Error) -> Void) {
         moviesAPIClient.getMovies(completionhandler: { data in
             DispatchQueue.main.async {
                 do {
@@ -24,7 +24,7 @@ class MoviesRepository: Repository {
         return moviesStorage.allMovies()[indexPath.row]
     }
     
-    var items: [Movie]{
+    var items: [Movie] {
         return moviesStorage.allMovies()
     }
 }

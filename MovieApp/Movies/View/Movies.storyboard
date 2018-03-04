@@ -45,12 +45,12 @@
         <!--Item-->
         <scene sceneID="C4p-w3-RH6">
             <objects>
-                <viewController id="vi5-pi-6qC" sceneMemberID="viewController">
+                <viewController id="vi5-pi-6qC" customClass="FavoriteMoviesViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D7N-x5-bge">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p8H-rL-A5v">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p8H-rL-A5v">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -65,6 +65,9 @@
                         <viewLayoutGuide key="safeArea" id="xuG-cI-8d4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="6jf-Np-9cn"/>
+                    <connections>
+                        <outlet property="tableView" destination="p8H-rL-A5v" id="rVp-Z5-lNq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30P-FQ-p4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
