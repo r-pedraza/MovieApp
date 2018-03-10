@@ -11,8 +11,11 @@ class FavoriteMoviesRepository: Repository {
         do {
             let realm = try Realm()
             let favoriteMovies = realm.objects(FavoriteMovie.self)
-            favoriteMovies.forEach(self.favoriteMoviesStorage.add)
-            completionHandler(favoriteMoviesStorage.allFavoriteMovies)
+            favoriteMovies.forEach {
+                print($0)
+                self.favoriteMoviesStorage.add(favoriteMovie: $0)
+            }
+            completionHandler(self.favoriteMoviesStorage.allFavoriteMovies)
         } catch let error {
             print("\(error.localizedDescription)")
         }
@@ -24,5 +27,13 @@ class FavoriteMoviesRepository: Repository {
     
     var items: [FavoriteMovie] {
         return favoriteMoviesStorage.allFavoriteMovies
+    }
+    
+    func removeFavoriteMovie(at indexPath: IndexPath) {
+        favoriteMoviesStorage.removeFavoriteMovie(at: indexPath)
+    }
+    
+    func saveFavoriteMovie(movie: Movie) {
+        favoriteMoviesStorage.saveFavoriteMovie(movie: movie)
     }
 }
