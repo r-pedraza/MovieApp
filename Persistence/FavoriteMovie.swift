@@ -6,6 +6,10 @@ class FavoriteMovie: Object, ViewModel {
     @objc dynamic var title = ""
     @objc dynamic var imagePath = ""
     
+    override class func primaryKey() -> String? {
+        return "id"
+    }
+        
     func setup(with movie: Movie) -> FavoriteMovie {
         let favoriteMovie = FavoriteMovie()
         favoriteMovie.id = movie.id
