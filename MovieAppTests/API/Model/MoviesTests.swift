@@ -17,7 +17,7 @@ class MoviesTests: XCTestCase {
                 XCTAssertNotNil(movie)
                 XCTAssertEqual(movie.title, "The Maze Runner")
                 XCTAssertEqual(movie.id, 198663)
-                XCTAssertEqual(movie.originalTitle, "The Maze Runner")
+                XCTAssertEqual(movie.original_title, "The Maze Runner")
             }
         } catch let error as NSError {
             debugPrint(error.localizedDescription)

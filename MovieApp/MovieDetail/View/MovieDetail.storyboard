@@ -19,40 +19,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5hX-Gs-yyX">
-                                <rect key="frame" x="10" y="30" width="375" height="627"/>
+                                <rect key="frame" x="10" y="65" width="375" height="592"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-XB-guJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="606"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="572.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPX-zG-1XA">
-                                        <rect key="frame" x="0.0" y="606" width="375" height="21"/>
+                                        <rect key="frame" x="0.0" y="572.5" width="375" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjk-A4-pXD">
+                                <rect key="frame" x="333" y="20" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="q99-wp-aN0"/>
+                                </constraints>
+                                <state key="normal" image="uncheckStar"/>
+                                <connections>
+                                    <action selector="didTapInfavoriteButton:" destination="KFn-4I-bgS" eventType="touchUpInside" id="ejB-Fe-mJq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyI-ES-pnb">
+                                <rect key="frame" x="16" y="22" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="esS-wP-aEc"/>
+                                    <constraint firstAttribute="height" constant="20" id="vgQ-r7-YiA"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="close"/>
+                                <connections>
+                                    <action selector="didTapInCloseButton:" destination="KFn-4I-bgS" eventType="touchUpInside" id="QMa-ls-B7s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5hX-Gs-yyX" firstAttribute="top" secondItem="6sS-xs-22v" secondAttribute="top" constant="10" id="DqU-bk-OUY"/>
+                            <constraint firstItem="EyI-ES-pnb" firstAttribute="leading" secondItem="6sS-xs-22v" secondAttribute="leading" constant="16" id="6LN-C4-7Pp"/>
+                            <constraint firstItem="6sS-xs-22v" firstAttribute="trailing" secondItem="kjk-A4-pXD" secondAttribute="trailing" constant="17" id="BYp-B6-TGR"/>
+                            <constraint firstItem="5hX-Gs-yyX" firstAttribute="top" secondItem="6sS-xs-22v" secondAttribute="top" constant="45" id="DqU-bk-OUY"/>
+                            <constraint firstItem="kjk-A4-pXD" firstAttribute="top" secondItem="6sS-xs-22v" secondAttribute="top" id="IYX-NZ-6X0"/>
+                            <constraint firstItem="EyI-ES-pnb" firstAttribute="top" secondItem="6sS-xs-22v" secondAttribute="top" constant="2" id="MdL-Ev-Fje"/>
                             <constraint firstItem="5hX-Gs-yyX" firstAttribute="leading" secondItem="6sS-xs-22v" secondAttribute="leading" constant="10" id="Xvm-QO-CjZ"/>
+                            <constraint firstItem="kjk-A4-pXD" firstAttribute="centerY" secondItem="EyI-ES-pnb" secondAttribute="centerY" id="Yad-DE-c1R"/>
                             <constraint firstItem="6sS-xs-22v" firstAttribute="trailing" secondItem="5hX-Gs-yyX" secondAttribute="trailing" constant="10" id="ndz-2b-63H"/>
                             <constraint firstItem="6sS-xs-22v" firstAttribute="bottom" secondItem="5hX-Gs-yyX" secondAttribute="bottom" constant="10" id="yFM-j7-fIM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6sS-xs-22v"/>
                     </view>
                     <connections>
+                        <outlet property="favoriteButton" destination="kjk-A4-pXD" id="RD0-vJ-dHd"/>
                         <outlet property="movieDetailDescriptionLabel" destination="rPX-zG-1XA" id="Ied-rM-pTN"/>
                         <outlet property="movieDetailImageView" destination="EP2-XB-guJ" id="K5d-lh-S8e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoP-s3-uP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-177" y="128"/>
+            <point key="canvasLocation" x="-178.40000000000001" y="127.28635682158921"/>
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="64" height="64"/>
         <image name="placeholder" width="795" height="596"/>
+        <image name="uncheckStar" width="56" height="53"/>
     </resources>
 </document>

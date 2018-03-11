@@ -1,11 +1,9 @@
 import UIKit
 
 class MoviesRouting {
-    private let navigationController: MoviesNavigationController!
     private let viewController: MoviesViewController!
     
-    init(navigationController: MoviesNavigationController, viewController: MoviesViewController) {
-        self.navigationController = navigationController
+    init(viewController: MoviesViewController) {
         self.viewController = viewController
     }
     
@@ -25,9 +23,7 @@ extension MoviesRouting: MoviesRoutingProtocol {
         let storyBoard = UIStoryboard(name: "MovieDetail", bundle: nil)
         if let movieDetailViewController = storyBoard.instantiateViewController(withIdentifier: "MovieDetailViewControllerID") as? MovieDetailViewController {
             movieDetailViewController.movie = detail
-            navigationController.pushViewController(viewController: movieDetailViewController, animated: true, completion: {
-            
-            })
+            viewController.present(movieDetailViewController, animated: true, completion: nil)
         }
     }
 }

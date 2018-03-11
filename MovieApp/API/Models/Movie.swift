@@ -1,6 +1,6 @@
 import Foundation
 
-class Movie: Codable, ViewModel {
+struct Movie: Codable, ViewModel {
     var imagePath: String {
         return "http://image.tmdb.org/t/p/w185/\(poster_path ?? "")"
     }

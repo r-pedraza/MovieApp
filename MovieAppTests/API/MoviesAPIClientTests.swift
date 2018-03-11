@@ -5,7 +5,7 @@ class MoviesAPIClientTests: XCTestCase {
     func testAPIFetchMovies() {
         let expectation = XCTestExpectation(description: "Tests movies API!!")
         let api = MoviesAPIClient()
-        api.fetchMovies(completionhandler: { data in
+        api.getMovies(completionhandler: { data in
             XCTAssertNotNil(data)
             expectation.fulfill()
         }) { error in

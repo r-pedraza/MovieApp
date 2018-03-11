@@ -8,11 +8,16 @@ class MovieDetailRouting: MovieDetailRoutingProtocol {
     }
     
     func setup() {
-        let interactor = MovieDetailInteractor()
+        let repository = FavoriteMoviesRepository()
+        let interactor = MovieDetailInteractor(repository: repository)
         let presenter = MovieDetailPresenter()
         presenter.interactor = interactor
         presenter.routing = self
         presenter.view = viewController
         viewController.presenter = presenter
+    }
+    //MARK: MovieDetailRoutingProtocol
+    func dismissMovieDetailViewController() {
+        viewController.dismiss(animated: true, completion: nil)
     }
 }
