@@ -21,11 +21,6 @@ class MoviesPresenter: MoviesPresenterProtocol {
     
     func selectRow(at indexPath: IndexPath) {
         let movie = interactor.movie(at: indexPath)
-        let realm = try! Realm()
-        try! realm.write {
-            let favoriteMovie = FavoriteMovie()
-            realm.add(favoriteMovie.setup(with: movie))
-        }
         routing.load(movie: movie)
     }
     

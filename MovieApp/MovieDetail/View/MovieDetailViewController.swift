@@ -3,8 +3,10 @@ import UIKit
 class MovieDetailViewController: UIViewController {
     var presenter: MovieDetailPresenterProtocol!
     var movie: Movie!
+    var isChecked: Bool = false
     @IBOutlet weak var movieDetailImageView: UIImageView!
     @IBOutlet weak var movieDetailDescriptionLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         _ = MovieDetailRouting(viewController: self).setup()
@@ -15,13 +17,21 @@ class MovieDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupView(with: movie)
-        if let nav = navigationController as? MoviesNavigationController {
-            nav.showFavoriteButton()
-        }
+         favoriteButtonCheckStatus()
     }
-    
+    //MARK: Private Methods
+    private func favoriteButtonCheckStatus() {
+        let image = isChecked == true ? UIImage(named: "checkStar") : UIImage(named: "uncheckStar")
+        favoriteButton.setImage(image, for: .normal)
+    }
+    //MARK: Actions
     @IBAction func didTapInCloseButton(_ sender: Any) {
         presenter.didTapInCloseButton()
+    }
+    @IBAction func didTapInfavoriteButton(_ sender: Any) {
+        isChecked = !isChecked
+        favoriteButtonCheckStatus()
+        presenter.save(movie: movie)
     }
 }
 //MARK: MovieDetailViewProtocol

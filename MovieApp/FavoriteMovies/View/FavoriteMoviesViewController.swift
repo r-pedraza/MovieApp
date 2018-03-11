@@ -13,22 +13,30 @@ class FavoriteMoviesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.load()
         setupTableView()
+        presenter.load(reload: true, indexPath: nil)
     }
     //MARK: Private Methods
     private func setupTableView() {
+        tableCellFactory = TableCellFactory(tableView: tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.estimatedRowHeight = UITableViewAutomaticDimension
-        tableView.rowHeight = 180
-        tableView.register(MovieTableViewCell.self)
-        tableCellFactory = TableCellFactory(tableView: tableView)
+        tableView.estimatedRowHeight = 180
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(FavoriteMovieTableViewCell.self)
     }
 }
 
 extension FavoriteMoviesViewController: FavoriteMoviesViewProtocol {
+    func reloadData() {
+        tableView.reloadData()
+    }
     
+    func removeCell(at indexPath: IndexPath) {
+        tableView.beginUpdates()
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        tableView.endUpdates()
+    }
 }
 
 extension FavoriteMoviesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -43,6 +51,14 @@ extension FavoriteMoviesViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let favoriteMovie = presenter.favoriteMovies[indexPath.row]
-        return tableCellFactory.createCell(viewModel: favoriteMovie)
+        return tableCellFactory.createCell(viewModel: favoriteMovie) as FavoriteMovieTableViewCell
+    }
+ 
+    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        let remove = UITableViewRowAction(style: .normal, title: "Remove") { action, index in
+            self.presenter.removeFavoriteMovie(at: index)
+        }
+        remove.backgroundColor = .red
+        return [remove]
     }
 }

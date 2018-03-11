@@ -22,4 +22,8 @@ class FavoriteMoviesInteractor: FavoriteMoviesInteractorProtocol {
     var allFavoriteMovies: [FavoriteMovie] {
         return favoritesMoviesRepository.items
     }
+    
+    func removeFavoriteMovie(at indexPath: IndexPath) {
+        favoritesMoviesRepository.removeFavoriteMovie(at: indexPath)
+    }
 }
