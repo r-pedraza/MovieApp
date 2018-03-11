@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5755E8E0204C82D5000A4EAF /* FavoriteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755E8DF204C82D5000A4EAF /* FavoriteMovie.swift */; };
 		5755E8E1204C82D5000A4EAF /* FavoriteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755E8DF204C82D5000A4EAF /* FavoriteMovie.swift */; };
+		5761C74420554D1900A26B66 /* FavoriteMoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B903A5204CAC58004D9FC9 /* FavoriteMoviesRepository.swift */; };
+		5761C74520554D3700A26B66 /* FavoriteMoviesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B903A8204CAEE6004D9FC9 /* FavoriteMoviesStorage.swift */; };
 		5767133D2040B26F00369809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5767133C2040B26F00369809 /* AppDelegate.swift */; };
 		576713442040B26F00369809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576713432040B26F00369809 /* Assets.xcassets */; };
 		576713472040B26F00369809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576713452040B26F00369809 /* LaunchScreen.storyboard */; };
@@ -812,6 +814,7 @@
 				576713C12040C5CB00369809 /* BaseTableViewCell.swift in Sources */,
 				576713EC2046037C00369809 /* MovieDetailInteractor.swift in Sources */,
 				5767139E2040BD3200369809 /* UIImageViewExtension.swift in Sources */,
+				5761C74420554D1900A26B66 /* FavoriteMoviesRepository.swift in Sources */,
 				576713E82046036900369809 /* MovieDetailPresenter.swift in Sources */,
 				5767139C2040BD3200369809 /* EncodableExtension.swift in Sources */,
 				576713A22040BD3200369809 /* UITableCellExtension.swift in Sources */,
@@ -825,6 +828,7 @@
 				576713A02040BD3200369809 /* UINavigationControllerExtension.swift in Sources */,
 				576713BA2040C17C00369809 /* Mapper.swift in Sources */,
 				576713E52046035B00369809 /* MovieDetailPresenterProtocol.swift in Sources */,
+				5761C74520554D3700A26B66 /* FavoriteMoviesStorage.swift in Sources */,
 				576713F22046039100369809 /* MovieDetailRouting.swift in Sources */,
 				576713A62040BD3200369809 /* DecodableExtension.swift in Sources */,
 				576713CF2040C6D500369809 /* MoviesNavigationController.swift in Sources */,
